@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Câmeras Ao Vivo</title>
+</head>
+<body>
+    <h1>Câmeras Ao Vivo</h1>
+    
+    <iframe id="camera1" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+    <iframe id="camera2" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+    <!-- Adicione mais <iframe> para outras câmeras -->
+
+    <script>
+        // Função para configurar o vídeo do YouTube
+        function setupYouTubeVideo(iframeId, videoId) {
+            const iframeElement = document.getElementById(iframeId);
+            iframeElement.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        }
+
+        // Chame a função para cada câmera do YouTube, passando o ID do <iframe> e o ID do vídeo
+        setupYouTubeVideo('camera1', 'VIDEO_ID_DO_YOUTUBE1');
+        setupYouTubeVideo('camera2', 'VIDEO_ID_DO_YOUTUBE2');
+        // Continue chamando a função para outras câmeras
+
+    </script>
+</body>
+</html>
